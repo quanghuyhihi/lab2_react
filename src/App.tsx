@@ -1,25 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './component/header';
+import Products from './component/products';
+import Footer from './component/footer';
+import Silde from './component/slide';
 
 function App() {
+  const title = [
+    'Home',
+    'About',
+    'Shop',
+    'Contact'
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header titles = {title}/>
+      <Silde/>
+      <Products/>
+      <Footer/>
+    </>
   );
 }
 
